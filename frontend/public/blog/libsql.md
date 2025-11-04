@@ -16,7 +16,7 @@ libSQL builds on the solid foundation of SQLite and adds things like:
 
 libSQL was created and is maintained by the team behind [Turso](https://turso.tech), but it has a long tail of [contributors](https://github.com/tursodatabase/libsql/graphs/contributors) and is growing in popularity rapidly:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=tursodatabase/libsql,sqlite/sqlite&type=Date)](https://star-history.com/#tursodatabase/libsql&sqlite/sqlite&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=tursodatabase/libsql,sqlite/sqlite&type=Date)](https://star-history.com/#tursodatabase/libsql&sqlite/sqlite&Date)
 
 ## Using libSQL
 

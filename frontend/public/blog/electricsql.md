@@ -53,4 +53,4 @@ Some demo applications:
 -   Realtime demo: https://electric-sql.com/docs/intro/multi-user
 -   Conflict-free offline: https://electric-sql.com/docs/intro/offline
 
-[![Star History Chart](https://api.star-history.com/svg?repos=electric-sql/electric&type=Date)](https://star-history.com/#electric-sql/electric&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=electric-sql/electric&type=Date)](https://star-history.com/#electric-sql/electric&Date)

@@ -26,7 +26,7 @@ const StarXYChart: React.FC<Props> = ({ classname = "", data, chartMode = "Date"
                     {
                         title: "Star History",
                         xLabel: chartMode === "Timeline" ? "Timeline" : "Date",
-                        yLabel: "GitHub Stars",
+                        yLabel: "GitCode Stars",
                         data: {
                             datasets: data.datasets
                         },

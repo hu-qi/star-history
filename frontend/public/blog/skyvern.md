@@ -39,7 +39,7 @@ Our project has seen exciting use cases, such as:
 
 We had a great [open source launch on Hacker News](https://news.ycombinator.com/item?id=39706004) and following that, the Skyvern repository reached 2.7K ⭐ in less than a week.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Skyvern-AI/skyvern&type=Date)](https://star-history.com/#Skyvern-AI/skyvern&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=Skyvern-AI/skyvern&type=Date)](https://star-history.com/#Skyvern-AI/skyvern&Date)
 
 If you’d like to try out Skyvern and see how it works yourself, visit our [GitHub](https://github.com/Skyvern-AI/skyvern). Contributions and feedback in any form are much appreciated.
 

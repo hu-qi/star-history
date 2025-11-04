@@ -8,7 +8,7 @@ Here's one obvious metric I'm sure you will also investigate: its GitHub stars.
 
 We know, you can't fully trust a project's GitHub stars alone. It is, however, a good way to determine if a tool is an adequate one and if it's likely to grow, if you use it correctly.
 
-Even if a project has hundreds of millions of stars now, doesn't mean that it's still gaining popularity or maintained. Or if the project had an explosive breakout in the past? There's no way of knowing these simply from gazing at the stars count. Here's when Star History comes in handy: it shows how the number of GitHub stars of a project is increasing over the years. And - it's free and [open-source](https://github.com/star-history/star-history).
+Even if a project has hundreds of millions of stars now, doesn't mean that it's still gaining popularity or maintained. Or if the project had an explosive breakout in the past? There's no way of knowing these simply from gazing at the stars count. Here's when Star History comes in handy: it shows how the number of GitHub stars of a project is increasing over the years. And - it's free and [open-source](https://github.com/huqi/star-history).
 
 ## User Manual
 
@@ -30,8 +30,8 @@ It's just a simple search box, how hard could it be? Simplicity is indeed Star H
 
 To add a repo, you can:
 
-1. Paste its whole URL in the search bar. e.g. `https://github.com/star-history/star-history`
-2. If you are feeling lazy, skip the [https://github.com/](https://github.com/) part. e.g `star-history/star-history`
+1. Paste its whole URL in the search bar. e.g. `https://github.com/huqi/star-history`
+2. If you are feeling lazy, skip the [https://github.com/](https://github.com/) part. e.g `huqi/star-history`
 3. When the repo name matches the organization's, writing once is enough, e.g. `star-history`. However, for something like `hashicorp/terraform` , you can't do `hashicorp` nor `terraform`, cuz they don't match and you need to specify `hashicorp/terraform`.
 
 ### How to add multiple repos

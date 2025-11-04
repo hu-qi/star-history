@@ -26,7 +26,7 @@ const EmbedChartGuideDialog: React.FC<EmbedCodeProps> = ({ onClose, embedCode })
                     <i className="fas fa-times-circle text-xl text-gray-400 cursor-pointer hover:text-gray-500" onClick={handleCloseBtnClick}></i>
                 </header>
                 <main className="w-full flex flex-col justify-start items-start p-4 pr-5">
-                    <p className="leading-7">{"It's very easy to add star-history chart into GitHub README, just two steps"}:</p>
+                    <p className="leading-7">{"It's very easy to add star-history chart into GitCode README, just two steps"}:</p>
                     <ol className="list-decimal pl-5 mt-3">
                         <li className="mb-2">
                             <p>Copy the raw markdown string below</p>

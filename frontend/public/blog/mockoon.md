@@ -54,7 +54,7 @@ In March 2021, I quit my job to focus full-time on the project. I'm now working 
 
 Fast forward six years, dozens of articles and tutorials written, tens of thousands of active users, and more than 400k downloads Mockoon is still there and growing!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mockoon/mockoon&type=Date)](https://star-history.com/#mockoon/mockoon&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=mockoon/mockoon&type=Date)](https://star-history.com/#mockoon/mockoon&Date)
 
 ## Roadmap
 

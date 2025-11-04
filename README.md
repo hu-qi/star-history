@@ -7,9 +7,9 @@
 [**star-history.com**](https://star-history.com), **the missing GitHub star history graph of GitHub repos.**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=star-history/star-history&type=Date&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=star-history/star-history&type=Date" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date" />
+  <img alt="Star History Chart" src="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date" />
 </picture>
 
 👆 **THIS** is a **`live`** chart created with the following html: 👇
@@ -21,18 +21,18 @@
   <source
     media="(prefers-color-scheme: dark)"
     srcset="
-      https://api.star-history.com/svg?repos=star-history/star-history&type=Date&theme=dark
+      https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date&theme=dark
     "
   />
   <source
     media="(prefers-color-scheme: light)"
     srcset="
-      https://api.star-history.com/svg?repos=star-history/star-history&type=Date
+      https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date
     "
   />
   <img
     alt="Star History Chart"
-    src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date"
+    src="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date"
   />
 </picture>
 ```
@@ -49,13 +49,13 @@
 
 [Bytebase](https://bytebase.com?source=star-history) is an open source, web-based database schema change and version control tool for teams. Supporting MySQL, PostgreSQL, Oracle, MongoDB, Redis, Snowflake, ClickHouse, TiDB, Google Spanner.
 
-<a href="https://bytebase.com?source=star-history"><img src="https://raw.githubusercontent.com/star-history/star-history/main/frontend/public/assets/sponsors/bytebase/landing.webp" /></a>
+<a href="https://bytebase.com?source=star-history"><img src="https://raw.githubusercontent.com/huqi/star-history/main/frontend/public/assets/sponsors/bytebase/landing.webp" /></a>
 
 ### Dify
 
 [Dify](https://dify.ai/?utm_source=star-history) is an open source LLMOps platform that helps developers build AI applications more simply and quickly. Its core idea is to define various aspects of AI applications, including Prompts, Contexts, and Plugins, through declarative YAML files.
 
-<a href="https://dify.ai/?utm_source=star-history"><img src="https://raw.githubusercontent.com/star-history/star-history/main/frontend/public/assets/sponsors/dify/landing.webp" /></a>
+<a href="https://dify.ai/?utm_source=star-history"><img src="https://raw.githubusercontent.com/huqi/star-history/main/frontend/public/assets/sponsors/dify/landing.webp" /></a>
 
 ## 💜 Token Contributor
 

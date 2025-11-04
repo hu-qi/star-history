@@ -27,9 +27,9 @@ const EmbedChart: React.FC = () => {
         return params
     }
 
-    const embedCode = `## Star History\n\n[![Star History Chart](https://api.star-history.com/svg?${buildQueryParams()})](${typeof window !== "undefined" ? window.location.href : ""})`
+    const embedCode = `## Star History\n\n[![Star History Chart](https://gstar.huqi.host/svg?${buildQueryParams()})](${typeof window !== "undefined" ? window.location.href : ""})`
 
-    const embedDarkModeCode = `## Star History\n\n<a href="${typeof window !== "undefined" ? window.location.href : ""}">\n <picture>\n   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?${buildQueryParams("dark")}" />\n   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?${buildQueryParams()}" />\n   <img alt="Star History Chart" src="https://api.star-history.com/svg?${buildQueryParams()}" />\n </picture>\n</a>`
+    const embedDarkModeCode = `## Star History\n\n<a href="${typeof window !== "undefined" ? window.location.href : ""}">\n <picture>\n   <source media="(prefers-color-scheme: dark)" srcset="https://gstar.huqi.host/svg?${buildQueryParams("dark")}" />\n   <source media="(prefers-color-scheme: light)" srcset="https://gstar.huqi.host/svg?${buildQueryParams()}" />\n   <img alt="Star History Chart" src="https://gstar.huqi.host/svg?${buildQueryParams()}" />\n </picture>\n</a>`
 
     const handleCopyBtnClick = () => {
         utils.copyTextToClipboard(embedCode)
@@ -46,14 +46,14 @@ const EmbedChart: React.FC = () => {
             <p className="leading-8 mb-3">
                 🌟 Show real-time chart on {repoText}{" "}
                 {singleRepo ? (
-                    <a className="font-mono underline text-blue-500 hover:opacity-80" href={`https://github.com/${singleRepo}/blob/master/README.md`} target="_blank">
+                    <a className="font-mono underline text-blue-500 hover:opacity-80" href={`https://gitcode.com/${singleRepo}/blob/master/README.md`} target="_blank">
                         README.md
                     </a>
                 ) : (
                     <span className="font-mono text-gray-500">README.md</span>
                 )}{" "}
                 with the following code (
-                <a className="font-mono underline text-blue-500 hover:opacity-80" href="https://github.com/star-history/star-history?tab=readme-ov-file#sparkles-star-history-sparkles" target="_blank">
+                <a className="font-mono underline text-blue-500 hover:opacity-80" href="https://gitcode.com/huqi/star-history?tab=readme-ov-file#sparkles-star-history-sparkles" target="_blank">
                     example
                 </a>
                 ):
@@ -69,7 +69,7 @@ const EmbedChart: React.FC = () => {
                         }}
                         onClick={handleCopyBtnClick}
                     >
-                        Copy to GitHub README.md
+                        Copy to GitCode README.md
                     </p>
                     <div className="bg-gray-100" style={{ width: "1px" }} />
                     <p

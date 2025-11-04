@@ -31,7 +31,7 @@ const startServer = async () => {
   });
 
   // Example request link:
-  // /svg?repos=star-history/star-history&type=timeline&logscale&legend=bottom-right
+  // /svg?repos=huqi/star-history&type=timeline&logscale&legend=bottom-right
   router.get("/svg", async (ctx) => {
     const theme = `${ctx.query["theme"]}`;
     const transparent = `${ctx.query["transparent"]}`
@@ -102,7 +102,16 @@ const startServer = async () => {
         const data = await getRepoData(nodataRepos, token, MAX_REQUEST_AMOUNT);
 
         for (const d of data) {
-          d.logoUrl = await getBase64Image(`${d.logoUrl}&size=22`);
+          // Append size parameter correctly: use '?' if no existing query, otherwise '&'
+          const sizedUrl = d.logoUrl.includes("?")
+            ? `${d.logoUrl}&size=22`
+            : `${d.logoUrl}?size=22`;
+          try {
+            d.logoUrl = await getBase64Image(sizedUrl);
+          } catch (_) {
+            // Fallback to original URL if sized URL fails
+            d.logoUrl = await getBase64Image(d.logoUrl);
+          }
           cache.set(d.repo, {
             starRecords: d.starRecords,
             starAmount: d.starRecords[d.starRecords.length - 1].count,
@@ -145,7 +154,7 @@ const startServer = async () => {
         {
           title: "Star History",
           xLabel: type === "Date" ? "Date" : "Timeline",
-          yLabel: "GitHub Stars",
+          yLabel: "GitCode Stars",
           data: convertDataToChartData(repoData, type),
           showDots: false,
           transparent: transparent.toLowerCase() === "true",

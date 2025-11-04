@@ -1,7 +1,7 @@
 {
     "name": "star_history",
     "version": "1.0.0",
-    "description": "The missing GitHub star history graph of GitHub projects",
+    "description": "The missing GitCode star history graph of GitCode projects",
     "main": "index.js",
     "private": true,
     "scripts": {

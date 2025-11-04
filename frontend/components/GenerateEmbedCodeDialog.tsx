@@ -60,15 +60,15 @@ const GenerateEmbedCodeDialog: React.FC<GenerateEmbedCodeDialogProps> = ({ onClo
                 <main className="w-full flex flex-col justify-start items-start p-4 pr-5">
                     <p>
                         Star-history will need your{" "}
-                        <a className="text-blue-500" href="https://github.com/settings/tokens" target="_blank">
+                        <a className="text-blue-500" href="https://gitcode.com/setting/token-classic" target="_blank">
                             personal access token{" "}
                         </a>
                         to unlimit the{" "}
                         <a className="text-blue-500" href="https://developer.github.com/v3/#rate-limiting" target="_blank">
-                            GitHub API rate limit
+                            GitCode API rate limit
                         </a>
                         . If you {"don't"} have one,{" "}
-                        <a className="text-blue-500" href="https://github.com/settings/tokens/new" target="_blank">
+                        <a className="text-blue-500" href="https://gitcode.com/setting/token-classic/create" target="_blank">
                             create one
                         </a>
                         , and paste it into the textbox below (no scope to your personal data is needed).

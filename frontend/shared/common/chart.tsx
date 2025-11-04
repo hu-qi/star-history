@@ -22,7 +22,7 @@ export const getReposStarData = async (repos: string[], token = "", maxRequestAm
                 message = `Repo ${repo} not found`
                 status = 404
             } else if (error?.response?.status === 403) {
-                message = "GitHub API rate limit exceeded"
+                message = "GitCode API rate limit exceeded"
                 status = 403
             } else if (error?.response?.status === 401) {
                 message = "Access Token Unauthorized"
@@ -71,9 +71,11 @@ export const getRepoData = async (repos: string[], token = "", maxRequestAmount 
     > = new Map()
 
     for (const repo of repos) {
+        console.log('repo', repo)
         try {
             const starRecords = await api.getRepoStarRecords(repo, token, maxRequestAmount)
             const logo = await api.getRepoLogoUrl(repo, token)
+            console.log('logo', logo)
             repoDataCacheMap.set(repo, { star: starRecords, logo })
         } catch (error: any) {
             let message = ""
@@ -83,7 +85,7 @@ export const getRepoData = async (repos: string[], token = "", maxRequestAmount 
                 message = `Repo ${repo} not found`
                 status = 404
             } else if (error?.response?.status === 403) {
-                message = "GitHub API rate limit exceeded"
+                message = "GitCode API rate limit exceeded"
                 status = 403
             } else if (error?.response?.status === 401) {
                 message = "Access Token Unauthorized"

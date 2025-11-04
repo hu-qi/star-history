@@ -14,16 +14,16 @@ const Index: NextPage<IndexProps> = () => {
     const [isChartVisible, setChartVisibility] = useState(false) // Start with false since chart is not visible by default
 
     const metadata = {
-		title:       "GitHub Star History",
-		description: "View and compare GitHub star history graph of open source projects.",
-		imageURL:    "https://star-history.com/assets/star-history.webp",
+		title:       "GitCode Star History",
+		description: "View and compare GitCode star history graph of open source projects.",
+		imageURL:    "https://gstar.huqi.host/assets/star-history.webp",
 	}
 
     return (
         <>
             <Head>
                 <title>{metadata.title}</title>
-                <meta name="description" content="GitHub Star History" />
+                <meta name="description" content="GitCode Star History" />
 
                 {/* Standard Meta Tags */}
                 <meta name="description" content={metadata.description} />
@@ -47,19 +47,19 @@ const Index: NextPage<IndexProps> = () => {
                     <div className="relative w-full h-auto min-h-screen flex flex-col">
                         <Header />
                         <div className="w-full h-auto grow flex flex-row justify-center">
-                            <div className="w-full md:max-w-5xl lg:max-w-7xl px-0 sm:px-4 h-auto grow lg:grid lg:grid-cols-[1fr_288px]">
-                                <div className="w-full flex flex-col justify-start sm:-ml-4">
+                            <div className="w-full md:max-w-5xl lg:max-w-7xl px-0 sm:px-4 h-auto grow lg:grid">
+                                <div className="w-full flex flex-col justify-start">
                                 <RepoInputer isChartVisible={isChartVisible} setChartVisibility={setChartVisibility} />
                                 {isChartVisible && <StarChartViewer />}
                             </div>
 
-                            <div className="w-full hidden lg:block sm:-mr-4">
+                            {/* <div className="w-full hidden lg:block sm:-mr-4">
                                 <RightSidebar />
-                            </div>
+                            </div> */}
                             </div>
                         </div>
 
-                        <Footer />
+                        {/* <Footer /> */}
                     </div>
                 </AppStateProvider>
             </section>

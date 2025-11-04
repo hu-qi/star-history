@@ -4,7 +4,7 @@ _This is the sixteenth issue of The Starlet List. If you want to prompt your ope
 
 [Apache Answer](https://answer.apache.org/) is an open-source Q&A platform software for teams at any scale, now incubating in Apache Software Foundation. Whether it’s a developer hub, support center, or knowledge base, you can always count on Apache Answer.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=apache/incubator-answer&type=Date)](https://star-history.com/#apache/incubator-answer&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=apache/incubator-answer&type=Date)](https://star-history.com/#apache/incubator-answer&Date)
 
 Answer is built with Go and ReactJS. It supports various databases, including SQLite, MySQL, and PostgreSQL, making it a flexible and scalable solution that can be deployed in any environment.
 

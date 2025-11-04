@@ -25,7 +25,7 @@ SpiceDB helps companies looking to break into the enterprise segment and/or adop
 
 SpiceDB was created and is maintained by the team behind AuthZed, and it also has a network of contributors and community members.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=authzed/spicedb&type=Date)](https://star-history.com/#authzed/spicedb&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=authzed/spicedb&type=Date)](https://star-history.com/#authzed/spicedb&Date)
 
 ## What is Google Zanzibar?
 

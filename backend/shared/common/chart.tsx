@@ -22,7 +22,7 @@ export const getReposStarData = async (repos: string[], token = "", maxRequestAm
                 message = `Repo ${repo} not found`
                 status = 404
             } else if (error?.response?.status === 403) {
-                message = "GitHub API rate limit exceeded"
+                message = "GitCode API rate limit exceeded"
                 status = 403
             } else if (error?.response?.status === 401) {
                 message = "Access Token Unauthorized"
@@ -83,7 +83,7 @@ export const getRepoData = async (repos: string[], token = "", maxRequestAmount 
                 message = `Repo ${repo} not found`
                 status = 404
             } else if (error?.response?.status === 403) {
-                message = "GitHub API rate limit exceeded"
+                message = "GitCode API rate limit exceeded"
                 status = 403
             } else if (error?.response?.status === 401) {
                 message = "Access Token Unauthorized"
@@ -142,7 +142,6 @@ export const convertStarDataToChartData = (reposStarData: RepoStarData[], chartM
     if (chartMode === "Date") {
         const datasets: XYData[] = reposStarData.map((item) => {
             const { repo, starRecords } = item
-
             return {
                 label: repo,
                 logo: "",
@@ -161,7 +160,6 @@ export const convertStarDataToChartData = (reposStarData: RepoStarData[], chartM
     } else {
         const datasets: XYData[] = reposStarData.map((item) => {
             const { repo, starRecords } = item
-
             const started = starRecords[0].date
 
             return {
@@ -183,6 +181,7 @@ export const convertStarDataToChartData = (reposStarData: RepoStarData[], chartM
 }
 
 export const convertDataToChartData = (repoData: RepoData[], chartMode: ChartMode): XYChartData => {
+    console.log(repoData)
     if (chartMode === "Date") {
         const datasets: XYData[] = repoData.map(({ repo, starRecords, logoUrl }) => ({
             label: repo,

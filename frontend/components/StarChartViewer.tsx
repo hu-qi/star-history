@@ -267,12 +267,12 @@ function StarChartViewer() {
 
             text = `${starText} Thank you! 🙏%0A${starhistoryLink}%0A%0A`
         } else {
-            text = `Check out my GitHub star history across multiple repos: ${starhistoryLink}%0A%0A`
+            text = `Check out my GitCode star history across multiple repos: ${starhistoryLink}%0A%0A`
         }
 
-        const addtionLink = repos.length === 1 ? `github.com/${repos[0]}` : starhistoryLink
+        const addtionLink = repos.length === 1 ? `gitcode.com/${repos[0]}` : starhistoryLink
         text += `${addtionLink}%0A%0A`
-        text += `${encodeURIComponent("#starhistory #GitHub #OpenSource ")} via @StarHistoryHQ`
+        text += `${encodeURIComponent("#starhistory #GitCode #OpenSource ")} via @StarHistoryHQ`
 
         const tweetShareLink = `https://twitter.com/intent/tweet?text=${text}`
         window.open(tweetShareLink, "_blank")

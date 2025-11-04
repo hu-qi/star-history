@@ -26,10 +26,10 @@ export const initTokenFromEnv = async () => {
   }
 
   const tokenList = envTokenString.split(/\r?\n/);
-  // Call GitHub API to check token usability
+  // Call GitCode API to check token usability
   for (const token of tokenList) {
     try {
-      await api.getRepoStargazersCount("star-history/star-history", token);
+      await api.getRepoStargazersCount("huqi/star-history", token);
       savedTokens.push(token);
     } catch (error) {
       logger.error(`Token ${token} is unusable`, error);

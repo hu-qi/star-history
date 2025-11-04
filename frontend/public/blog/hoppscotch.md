@@ -31,7 +31,7 @@ Hoppscotch is one of the most popular open-source repositories and the community
 
 ### Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=hoppscotch/hoppscotch&type=Date)](https://star-history.com/#hoppscotch/hoppscotch&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=hoppscotch/hoppscotch&type=Date)](https://star-history.com/#hoppscotch/hoppscotch&Date)
 
 ## The road ahead
 

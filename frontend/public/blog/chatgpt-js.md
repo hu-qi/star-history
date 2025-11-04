@@ -67,7 +67,7 @@ Some popular & award-winning apps made w/ **chatgpt.js** include:
 
 **chatgpt.js** is still a very young lib, but as shown by the Star History chart, it had a stunning growth period during a span of mere weeks:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=kudoai/chatgpt.js&type=Date)](https://star-history.com/#kudoai/chatgpt.js&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=kudoai/chatgpt.js&type=Date)](https://star-history.com/#kudoai/chatgpt.js&Date)
 
 Two main events can be attributed with causing this astonishing growth spurt:
 

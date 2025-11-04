@@ -1,11 +1,11 @@
 import axios from "axios"
 import utils from "./utils.js"
 
-const API_PER_PAGE = 100  // GitHub API max items per request
+const API_PER_PAGE = 100  // GitCode API max items per request
 
 namespace api {
     export async function getRepoStargazers(repo: string, token?: string, page?: number) {
-        let url = `https://api.github.com/repos/${repo}/stargazers?per_page=${API_PER_PAGE}`
+        let url = `https://api.gitcode.com/api/v5/repos/${repo}/stargazers?per_page=${API_PER_PAGE}`
 
         if (page !== undefined) {
             url = `${url}&page=${page}`
@@ -13,16 +13,16 @@ namespace api {
         return axios.get(url, {
             headers: {
                 Accept: "application/vnd.github.v3.star+json",
-                Authorization: token ? `token ${token}` : ""
+                Authorization: token ? `Bearer ${token}` : ""
             }
         })
     }
 
     export async function getRepoStargazersCount(repo: string, token?: string) {
-        const { data } = await axios.get(`https://api.github.com/repos/${repo}`, {
+        const { data } = await axios.get(`https://api.gitcode.com/api/v5/repos/${repo}`, {
             headers: {
                 Accept: "application/vnd.github.v3.star+json",
-                Authorization: token ? `token ${token}` : ""
+                Authorization: token ? `Bearer ${token}` : ""
             }
         })
 
@@ -78,6 +78,8 @@ namespace api {
                 const { data } = res
                 starRecordsData.push(...data)
             })
+            // Sort by starred_at ascending
+            starRecordsData.sort((a, b) => new Date(a.starred_at).getTime() - new Date(b.starred_at).getTime())
             for (let i = 0; i < starRecordsData.length; ) {
                 starRecordsMap.set(utils.getDateString(starRecordsData[i].starred_at), i + 1)
                 i += Math.floor(starRecordsData.length / maxRequestAmount) || 1
@@ -85,7 +87,11 @@ namespace api {
         } else {
             resArray.map(({ data }, index) => {
                 if (data.length > 0) {
-                    const starRecord = data[0]
+                    // Ensure per-page data is sorted ascending by starred_at
+                    const sortedData = [...data].sort(
+                        (a, b) => new Date(a.starred_at).getTime() - new Date(b.starred_at).getTime()
+                    )
+                    const starRecord = sortedData[0]
                     // Calculate actual star position based on API page size and position in page
                     const pageStartPosition = API_PER_PAGE * (requestPages[index] - 1)
                     starRecordsMap.set(utils.getDateString(starRecord.starred_at), pageStartPosition)
@@ -113,14 +119,24 @@ namespace api {
 
     export async function getRepoLogoUrl(repo: string, token?: string): Promise<string> {
         const owner = repo.split("/")[0]
-        const { data } = await axios.get(`https://api.github.com/users/${owner}`, {
+        try {
+            const { data } = await axios.get(`https://api.gitcode.com/api/v5/users/${owner}`, {
             headers: {
                 Accept: "application/vnd.github.v3.star+json",
-                Authorization: token ? `token ${token}` : ""
+                Authorization: token ? `Bearer ${token}` : ""
             }
         })
 
         return data.avatar_url
+        } catch (error) {
+            const { data } = await axios.get(`https://api.gitcode.com/api/v5/orgs/${owner}`, {
+            headers: {
+                Accept: "application/vnd.github.v3.star+json",
+                Authorization: token ? `Bearer ${token}` : ""
+            }
+        })
+        return data.avatar_url
+        }
     }
 }
 

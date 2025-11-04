@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TopBanner from "./TopBanner";
-import GitHubStarButton from "./GitHubStarButton";
+import GitCodeStarButton from "./GitCodeStarButton";
 import TokenSettingDialog from "./TokenSettingDialog";
 import Link from "next/link";
 import { AppStateProvider, useAppStore } from "../store";
@@ -56,9 +56,9 @@ useEffect(() => {
               <Link href="/" className="h-full flex flex-row justify-center items-center px-3 hover:bg-zinc-800">
                 <img className="w-7 h-auto" src="/assets/icon.png" alt="Logo" />
               </Link>
-              <Link href="/blog"className="h-full flex flex-row justify-center items-center text-base px-2 hover:bg-zinc-800">
+              {/* <Link href="/blog"className="h-full flex flex-row justify-center items-center text-base px-2 hover:bg-zinc-800">
                 <span className="text-white -2">Blog</span>
-              </Link>
+              </Link> */}
               <span
                 className="h-full flex flex-row justify-center items-center cursor-pointer text-white text-base px-2 hover:bg-zinc-800"
                 onClick={handleSetTokenBtnClick}
@@ -67,18 +67,18 @@ useEffect(() => {
               </span>
             </div>
             <div className="hidden md:flex flex-row justify-center items-center">
-              <Link href="/blog/how-to-use-github-star-history" className="flex flex-row items-center text-base px-2 hover:underline">
+              {/* <Link href="/blog/how-to-use-github-star-history" className="flex flex-row items-center text-base px-2 hover:underline">
                 <span className="text-white">📕 How to Use</span>
-              </Link>
+              </Link> */}
             </div>
             <div className="h-full hidden md:flex flex-row justify-end items-center space-x-2">
-              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://twitter.com/StarHistoryHQ" target="_blank" rel="noopener noreferrer">
+              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://twitter.com/huqii" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter text-2xl text-blue-300"></i>
               </a>
-              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://rss.beehiiv.com/feeds/BbNzf9ozGZ.xml" target="_blank" rel="noopener noreferrer">
+              {/* <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://rss.beehiiv.com/feeds/BbNzf9ozGZ.xml" target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-rss text-2xl text-orange-400"></i>
-              </a>
-              <GitHubStarButton />
+              </a> */}
+              <GitCodeStarButton />
             </div>
 
             <div className="h-full flex md:hidden flex-row justify-end items-center">
@@ -103,9 +103,9 @@ useEffect(() => {
           <span className="h-12 text-base px-3 w-full flex flex-row justify-start items-center">
             <a
               className="github-button -mt-1"
-              href="https://github.com/star-history/star-history"
+              href="https://gitcode.com/huqi/star-history"
               data-show-count="true"
-              aria-label="Star star-history/star-history on GitHub"
+              aria-label="Star huqi/star-history on GitCode"
               target="_blank"
               rel="noopener noreferrer"
             >

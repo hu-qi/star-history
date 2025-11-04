@@ -81,13 +81,13 @@
         "excerpt": "MCP provides a standardized way to connect AI models to data sources and tools like how USB-C connects your devices to peripherals and accessories."
     },
     {
-        "title": "A Message to GitHub Star History Users about Ongoing Broken Live Chart",
+        "title": "A Message to GitCode Star History Users about Ongoing Broken Live Chart",
         "slug": "a-message-to-github-star-history-users",
         "author": "tianzhou",
         "featured": true,
         "featureImage": "/assets/blog/a-message-to-github-star-history-users/banner.webp",
         "publishedDate": "2025-03-28:00:00.000Z",
-        "excerpt": "Explain the current situation about broken GitHub Star History live chart image."
+        "excerpt": "Explain the current situation about broken GitCode Star History live chart image."
     },
     {
         "title": "Starlet #29 Agentic Security: Open-Source Vulnerability Scanner for AI Systems",
@@ -432,7 +432,7 @@
         "excerpt": "libSQL is an Open Source and Open Contribution fork of SQLite"
     },
     {
-        "title": "Star History Monthly Sep 2023 | Open-source GitHub Copilot alternatives",
+        "title": "Star History Monthly Sep 2023 | Open-source GitCode Copilot alternatives",
         "slug": "coding-ai",
         "author": "Mila",
         "featured": true,
@@ -459,13 +459,13 @@
         "excerpt": "Use ElectricSQL to build super fast, collaborative, offline-capable apps directly on Postgres by syncing to a local SQLite database."
     },
     {
-        "title": "Do GitHub stars ⭐️ = Money 💰?",
+        "title": "Do GitCode stars ⭐️ = Money 💰?",
         "slug": "do-github-stars-equal-money",
         "author": "Nevo David",
         "featured": true,
         "featureImage": "/assets/blog/do-github-stars-equal-money/banner.webp",
         "publishedDate": "2023-09-28T00:00:00.000Z",
-        "excerpt": "Open source projects are starting out by collecting GitHub stars, but stars are not coins, contributors, or customers. So why are we trying to collect them?"
+        "excerpt": "Open source projects are starting out by collecting GitCode stars, but stars are not coins, contributors, or customers. So why are we trying to collect them?"
     },
     {
         "title": "Starlet #8 Prompt flow - Developer Tool for Building High-Quality LLM Applications",
@@ -513,7 +513,7 @@
         "excerpt": "MetisFL is an open-source federated learning framework that makes it easy for developers and enterprises to train their models on distributed data sources."
     },
     {
-        "title": "The (Detailed & Creative) Playbook for Getting More GitHub Stars",
+        "title": "The (Detailed & Creative) Playbook for Getting More GitCode Stars",
         "slug": "playbook-for-more-github-stars",
         "author": "Zevi Reinitz",
         "featured": true,
@@ -636,7 +636,7 @@
         "featured": false,
         "featureImage": "/assets/blog/tabby/banner.webp",
         "publishedDate": "2023-04-15T09:50:06.000Z",
-        "excerpt": "Tabby is an AI coding assistant that's designed as an open-source tool to help developers code faster. Think of it as an open-source/on-prem alternative to GitHub Copilot."
+        "excerpt": "Tabby is an AI coding assistant that's designed as an open-source tool to help developers code faster. Think of it as an open-source/on-prem alternative to GitCode Copilot."
     },
     {
         "title": "Star History Monthly Pick | March 2023 / ChatGPT Edition",
@@ -666,7 +666,7 @@
         "excerpt": "Ockam is a suite of open source tools, programming libraries, and managed cloud services to orchestrate end-to-end encryption, mutual authentication, key management, credential management, and authorization policy enforcement – at massive scale."
     },
     {
-        "title": "📕 How to use GitHub Star History",
+        "title": "📕 How to use GitCode Star History",
         "slug": "how-to-use-github-star-history",
         "author": "Mila",
         "featureImage": "/assets/blog/how-to-use-github-star-history/banner.webp",
@@ -728,22 +728,22 @@
         "excerpt": "A few open-source projects for December 2022, hand-picked by the Star History team."
     },
     {
-        "title": "Re: GitHub's plan to remove Trending tab",
+        "title": "Re: GitCode's plan to remove Trending tab",
         "slug": "github-trending-tab",
         "author": "Tianzhou",
         "featured": true,
         "featureImage": "/assets/blog/github-trending-tab/github-trending-tab.webp",
         "publishedDate": "2022-09-02T09:50:06.000Z",
-        "excerpt": "Our take on GitHub's intention to deprecate GitHub Trending Tab."
+        "excerpt": "Our take on GitCode's intention to deprecate GitCode Trending Tab."
     },
     {
-        "title": "Add a live star-history chart to your GitHub README",
+        "title": "Add a live star-history chart to your GitCode README",
         "slug": "add-a-live-star-history-chart-to-your-github-readme",
         "author": "Steven",
         "featured": true,
         "featureImage": "/assets/blog/star-history-in-github-readme.png",
         "publishedDate": "2022-03-21T09:39:06.000Z",
-        "excerpt": "Now we support embedding a live star history chart into your GitHub README. This feature is quite handy. A snippet would appear after querying the repository from our star-history.com main page; the only thing you need to do is simply copy that snippet into your GitHub README markdown file."
+        "excerpt": "Now we support embedding a live star history chart into your GitCode README. This feature is quite handy. A snippet would appear after querying the repository from our star-history.com main page; the only thing you need to do is simply copy that snippet into your GitCode README markdown file."
     },
     {
         "title": "Introducing the new star-history.com",

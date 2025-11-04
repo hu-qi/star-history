@@ -34,4 +34,4 @@ Unlike all other non-trivial clipboard managers out there, the Clipboard Project
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Slackadays/Clipboard&type=Date)](https://star-history.com/#Slackadays/Clipboard&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=Slackadays/Clipboard&type=Date)](https://star-history.com/#Slackadays/Clipboard&Date)

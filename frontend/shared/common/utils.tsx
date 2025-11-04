@@ -109,7 +109,20 @@ namespace utils {
         return `${count} min read`
     }
 
-    export function getBase64Image(url: string): Promise<string> {
+    export async function getBase64Image(url: string): Promise<string> {
+        // Prefer server-side proxy to avoid CORS tainting
+        try {
+            const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(url)}`
+            const res = await fetch(proxyUrl)
+            if (res.ok) {
+                const data = (await res.json()) as { dataUrl?: string }
+                if (data?.dataUrl) return data.dataUrl
+            }
+        } catch (_err) {
+            // fall back to client-side approach below
+        }
+
+        // Fallback: attempt client-side conversion (may fail due to CORS)
         return new Promise((resolve, reject) => {
             const img = new Image()
             img.src = url

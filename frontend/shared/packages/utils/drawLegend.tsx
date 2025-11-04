@@ -47,7 +47,7 @@ const drawLegend = (selection: D3Selection, { items, strokeColor, backgroundColo
         legendY = chartHeight - backgroundHeight - 15
     }
 
-    items.forEach((item, i) => {
+    items.forEach(async(item, i) => {
         // draw color dot
         textLayer
             .append("rect")
@@ -60,6 +60,18 @@ const drawLegend = (selection: D3Selection, { items, strokeColor, backgroundColo
             .attr("x", legendX + legendXPadding)
             .attr("y", legendY + 12 + xkcdCharHeight * i)
         if (shouldDrawLogo) {
+            let imgUrl = ''
+            try {
+                const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(item.logo)}`
+                const res = await fetch(proxyUrl)
+                if (res.ok) {
+                    const data = (await res.json()) as { dataUrl?: string }
+                    if (data?.dataUrl) imgUrl = data.dataUrl
+                }
+            } catch (_err) {
+                // fall back to client-side approach below
+            }
+
             textLayer
                 .append("defs")
                 .append("clipPath")
@@ -74,7 +86,7 @@ const drawLegend = (selection: D3Selection, { items, strokeColor, backgroundColo
                 .attr("y", legendY + 12 + xkcdCharHeight * i - 4)
                 .attr("height", logoSize)
                 .attr("width", logoSize)
-                .attr("href", item.logo)
+                .attr("href", imgUrl || item.logo)
                 .attr("clip-path", `url(#clip-circle-title-${item.text})`)
         }
         // draw text

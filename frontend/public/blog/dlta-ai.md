@@ -68,4 +68,4 @@ In the figure above, we opened a video showing a street, sampled it by taking a 
 
 DLTA-AI is still very young, but looks like it's been growing steadily since its open-source (April, 2023, which was only a few months ago!). Good luck, folks!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=0ssamaak0/DLTA-AI&type=Date)](https://star-history.com/#0ssamaak0/DLTA-AI&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=0ssamaak0/DLTA-AI&type=Date)](https://star-history.com/#0ssamaak0/DLTA-AI&Date)

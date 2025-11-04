@@ -32,6 +32,8 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
     const inputElRef = useRef<HTMLInputElement | null>(null)
 
     
+
+    
     useEffect(() => {
         if (store.repos.length === 0) {
             const fetchData = async () => {
@@ -137,7 +139,7 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
         }
         let rawRepos = state.repo
         if (rawRepos === "" && state.repos.length === 0) {
-            rawRepos = "star-history/star-history"
+            rawRepos = "huqi/star-history"
         }
 
         if (rawRepos === "") {
@@ -271,15 +273,15 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
         <div className="w-full px-3 shrink-0 flex flex-col justify-start items-center">
             <div className={`w-auto mx-auto mt-6 mb-2 flex flex-row justify-center items-center flex-wrap ${state.latestBlog ? "" : "invisible"}`}>
                 <span className="px-2 -mt-px leading-7 rounded mr-2 text-sm bg-green-100 text-green-600 font-medium">
-                    {state.latestBlog?.publishedDate ? (() => {
+                    {/* {state.latestBlog?.publishedDate ? (() => {
                         const dateStr = state.latestBlog.publishedDate.split(":")[0];
                         return new Date(dateStr).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-                    })() : "What's new"}
+                    })() : "What's new"} */}
                 </span>
                 <div className="flex items-center">
-                    <Link className="text-gray-700 hover:underline" href={`/blog/${state.latestBlog?.slug}`}>
+                    {/* <Link className="text-gray-700 hover:underline" href={`/blog/${state.latestBlog?.slug}`}>
                         {state.latestBlog?.title} <i className="fas fa-chevron-right mr-1 text-gray-500 text-sm"></i>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
             <div className="w-auto sm:w-full grow max-w-3xl 2xl:max-w-4xl mt-4 flex flex-row justify-center items-center shadow-inner border border-solid border-black rounded">
@@ -289,7 +291,7 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
                     onChange={(e) => setState((prev) => ({ ...prev, repo: e.target.value }))}
                     className="w-auto h-9 px-2 grow shrink text-dark outline-none rounded rounded-r-none placeholder:text-gray-300 focus:shadow-focus"
                     type="text"
-                    placeholder={state.repos.length > 0 ? "...add next repository" : "star-history or star-history/star-history or https://github.com/star-history/star-history"}
+                    placeholder={state.repos.length > 0 ? "...add next repository" : "star-history or huqi/star-history or https://gitcode.com/huqi/star-history"}
                     onPaste={handleInputerPasted}
                     onKeyDown={handleInputerKeyDown}
                 />
@@ -314,7 +316,7 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
                             >
                                 {item.name}
                             </span>
-                            <a href={`https://github.com/${item.name}`} target="_blank" className="flex items-center">
+                            <a href={`https://gitcode.com/${item.name}`} target="_blank" className="flex items-center">
                                 <FaExternalLinkAlt className="fas fa-external-link-alt fa-sm text-gray-400 hover:text-green-600" />
                             </a>
                         </div>

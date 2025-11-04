@@ -1,6 +1,6 @@
 import { D3Selection } from "../types"
 
-export const drawTitle = (selection: D3Selection, text: string, logoURL: string, color: string, chartWidth?: number) => {
+export const drawTitle = async (selection: D3Selection, text: string, logoURL: string, color: string, chartWidth?: number) => {
     let logoX: string | number = "38%",
         clipX: string | number = "39.5%"
     if (selection.node()?.getBoundingClientRect()) {
@@ -23,7 +23,19 @@ export const drawTitle = (selection: D3Selection, text: string, logoURL: string,
         .attr("cx", clipX)
         .attr("cy", 12 + 11)
     if (logoURL) {
-        selection.append("image").attr("x", logoX).attr("y", 12).attr("height", 22).attr("width", 22).attr("href", logoURL).attr("clip-path", "url(#clip-circle-title)")
+        let imgUrl = ''
+        try {
+            const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(logoURL)}`
+            const res = await fetch(proxyUrl)
+            if (res.ok) {
+                const data = (await res.json()) as { dataUrl?: string }
+                if (data?.dataUrl) imgUrl = data.dataUrl
+            }
+        } catch (_err) {
+            // fall back to client-side approach below
+        }
+        
+        selection.append("image").attr("x", logoX).attr("y", 12).attr("height", 22).attr("width", 22).attr("href", imgUrl || logoURL).attr("clip-path", "url(#clip-circle-title)")
     }
 }
 

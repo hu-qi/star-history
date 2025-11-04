@@ -6,7 +6,7 @@ After a month of hard work, we are happy to introduce you to the new [star-histo
 
 If you ever see a GitHub star chart before, it's likely from [star-history.com](https://star-history.com).
 ![star-history-image](/assets/blog/star-history-image.png)
-[The star-history project](https://github.com/star-history/star-history)started around 2016 as an open source project on GitHub, it has gained momentum over the years and accumulated over 2.5K GitHub stars. Today, it ranks No.1 on various GitHub Star related search keywords.
+[The star-history project](https://github.com/huqi/star-history)started around 2016 as an open source project on GitHub, it has gained momentum over the years and accumulated over 2.5K GitHub stars. Today, it ranks No.1 on various GitHub Star related search keywords.
 ![star-history-google-result](/assets/blog/star-history-google-result.png)
 star-history also has a [chrome extension](https://chrome.google.com/webstore/detail/star-history/iijibbcdddbhokfepbblglfgdglnccfn).
 ![star-history-chrome-extension](/assets/blog/star-history-chrome-extension.png)

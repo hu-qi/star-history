@@ -64,7 +64,7 @@ For more details, check out the docs: [https://wasp-lang.dev/docs/quick-start](h
 
 Wasp has had a pretty solid Year 2023, and in October alone we doubled our stars, growing from 4k to 8k🚀.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=wasp-lang/wasp&type=Date)](https://star-history.com/#wasp-lang/wasp&Date)
+[![Star History Chart](https://gstar.huqi.host/svg?repos=wasp-lang/wasp&type=Date)](https://star-history.com/#wasp-lang/wasp&Date)
 
 If you'd like to learn more and try out Wasp for yourself, visit our site!
 

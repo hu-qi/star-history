@@ -31,7 +31,7 @@ const BlogPost: React.FC<State> = ({ blog, parsedBlogHTML }) => {
     return (
         <AppStateProvider>
             <div className="relative w-full h-auto min-h-screen flex flex-col">
-                <title>{blog ? `${blog.title}` : "GitHub Star History"}</title>
+                <title>{blog ? `${blog.title}` : "GitCode Star History"}</title>
                 {
                     blog && (
                         <>
