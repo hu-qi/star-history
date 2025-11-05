@@ -5,7 +5,7 @@ import utils from "./utils"
 
 export const DEFAULT_MAX_REQUEST_AMOUNT = 15
 
-const STAR_HISTORY_LOGO_URL = "https://avatars.githubusercontent.com/u/124480067"
+const STAR_HISTORY_LOGO_URL = "https://cdn-img.gitcode.com/cc/ae/c21c74a8e13c1490119741b079056582f302744f2d94bda708eff21af7ce4b62.png"
 
 export const getReposStarData = async (repos: string[], token = "", maxRequestAmount = DEFAULT_MAX_REQUEST_AMOUNT): Promise<RepoStarData[]> => {
     const repoStarDataCacheMap = new Map()

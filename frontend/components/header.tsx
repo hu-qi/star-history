@@ -72,6 +72,10 @@ useEffect(() => {
               </Link> */}
             </div>
             <div className="h-full hidden md:flex flex-row justify-end items-center space-x-2">
+              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://raw.gitcode.com/huqi/huqi/raw/main/wechat-huqi.jpg" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-weixin text-2xl text-green-500"></i>
+              </a>
+
               <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://twitter.com/huqii" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-twitter text-2xl text-blue-300"></i>
               </a>

@@ -291,7 +291,7 @@ export default function RepoInputer({ setChartVisibility }: RepoInputerProps) {
                     onChange={(e) => setState((prev) => ({ ...prev, repo: e.target.value }))}
                     className="w-auto h-9 px-2 grow shrink text-dark outline-none rounded rounded-r-none placeholder:text-gray-300 focus:shadow-focus"
                     type="text"
-                    placeholder={state.repos.length > 0 ? "...add next repository" : "star-history or huqi/star-history or https://gitcode.com/huqi/star-history"}
+                    placeholder={state.repos.length > 0 ? "...add next repository" : "huqi or Cangjie/CangjieCommunity or https://gitcode.com/huqi/star-history"}
                     onPaste={handleInputerPasted}
                     onKeyDown={handleInputerKeyDown}
                 />
