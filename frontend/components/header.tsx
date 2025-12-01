@@ -4,6 +4,7 @@ import GitCodeStarButton from "./GitCodeStarButton";
 import TokenSettingDialog from "./TokenSettingDialog";
 import Link from "next/link";
 import { AppStateProvider, useAppStore } from "../store";
+import storage from "../helpers/storage"
 
 const Header: React.FC = () => {
   const store = useAppStore()
@@ -37,6 +38,10 @@ const Header: React.FC = () => {
 
 useEffect(() => {
   setHeaderText(store.token ? "Edit Access Token" : "Add Access Token")
+  store.setToken(process.env.NEXT_PUBLIC_GITCODE_ACCESS_TOKEN || "");
+  storage.set({
+      accessTokenCache: process.env.NEXT_PUBLIC_GITCODE_ACCESS_TOKEN || ""
+  });
 }, [store.token]);
 
   return (

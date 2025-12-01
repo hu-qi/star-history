@@ -18,7 +18,7 @@ export default function TokenSettingDialog({ onClose, tokenCache }: TokenSetting
     useEffect(() => {
         setHasToken(!!(tokenCache || store.token))
         if (!hasToken && token === "") {
-            setToken(""); // Clear token state if token status is "Add Access Token" and token is empty
+            setToken(process.env.NEXT_PUBLIC_GITCODE_ACCESS_TOKEN || ""); // Clear token state if token status is "Add Access Token" and token is empty
         }
     }, [tokenCache, store.token, hasToken, token])
 
@@ -72,7 +72,7 @@ export default function TokenSettingDialog({ onClose, tokenCache }: TokenSetting
                         </p>
                         <br />
                         <p className="font-bold">Access Token (will be stored in your local storage)</p>
-                        <input value={token} onChange={(e) => setToken(e.target.value)} className="w-full outline-none border mt-2 shadow-inner p-2 rounded-md focus:shadow-focus" type="text" />
+                        <input value={token} onChange={(e) => setToken(e.target.value)} className="w-full outline-none border mt-2 shadow-inner p-2 rounded-md focus:shadow-focus" type="password" />
                     </main>
                     <footer className="w-full flex flex-row justify-end bg-gray-100 items-center p-4 pr-5 border-t rounded-b-md">
                         <button className="pl-4 pr-4 h-10 rounded-md bg-green-500 shadow-inner text-white text-base hover:bg-green-600" onClick={handleSaveTokenBtnClick}>
