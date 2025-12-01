@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
-RUN pnpm i
+RUN pnpm config set registry https://registry.npmmirror.com  && pnpm i
 
 # Copy source code
 COPY . .
