@@ -7,7 +7,7 @@ COPY . .
 # Set NODE_ENV to 'production'
 ENV NODE_ENV=production
 
-RUN corepack enable && pnpm i --frozen-lockfile --prod
+RUN corepack enable && pnpm config set registry https://registry.npmmirror.com && pnpm i --frozen-lockfile --prod
 
 RUN pnpm build
 
