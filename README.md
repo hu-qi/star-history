@@ -26,9 +26,7 @@
   />
   <source
     media="(prefers-color-scheme: light)"
-    srcset="
-      https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date
-    "
+    srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date"
   />
   <img
     alt="Star History Chart"
@@ -90,6 +88,26 @@ To contribute:
 ### 🧩 [Free chrome extension](https://chrome.google.com/webstore/detail/star-history/iijibbcdddbhokfepbblglfgdglnccfn)
 
 <a href="https://chrome.google.com/webstore/detail/star-history/iijibbcdddbhokfepbblglfgdglnccfn"><img width="800px" src="https://user-images.githubusercontent.com/24653555/154391326-61b65d8f-3f9f-4432-b773-5988be75b0ea.png" /></a>
+
+## 🐳 Docker Deployment
+
+You can deploy the entire stack (frontend + backend) using Docker.
+
+1. Build the image:
+
+   ```bash
+   docker build -t star-history .
+   ```
+
+2. Run the container:
+
+   ```bash
+   docker run -p 3000:3000 -p 8080:8080 star-history
+   ```
+
+   The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:8080`.
+
+   **Note:** You may need to provide environment variables (e.g., GitHub tokens) if required by the application.
 
 ## 🏗 Development
 
