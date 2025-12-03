@@ -107,18 +107,35 @@ You can deploy the entire stack (frontend + backend) using Docker.
    docker run -p 3000:3000 -p 8080:8080 star-history
    ```
 
-   **Run with environment variables from host machine:**
+   **Run with environment variables:**
 
    ```bash
    docker run -d \
      -p 3000:3000 \
      -p 8080:8080 \
+     -e NEXT_PUBLIC_GITCODE_ACCESS_TOKEN=your_gitcode_token_here \
+     --name star-history-app \
+     --restart unless-stopped \
+     star-history
+   ```
+
+   **Or use environment file:**
+
+   ```bash
+   docker run -d \
+     -p 3000:3000 \
+     -p 8080:8080 \
+     --env-file /root/.env.star-hitstory \
      --name star-history-app \
      --restart unless-stopped \
      star-history
    ```
 
    The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:8080`.
+
+   **Required Environment Variables:**
+
+   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - GitCode access token(s) for backend API access (one token per line for multiple tokens)
 
 ## 🏗 Development
 
