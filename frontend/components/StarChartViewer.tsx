@@ -348,7 +348,7 @@ function StarChartViewer() {
     }
     return (
         <>
-            <div ref={containerElRef} className="relative w-full h-auto min-h-400px self-center max-w-3xl 2xl:max-w-4xl sm:p-4 pt-0">
+            <div ref={containerElRef} className="relative w-full h-auto min-h-400px self-center max-w-3xl 2xl:max-w-4xl sm:p-4 pt-0 overflow-x-auto">
                 {store.isFetching && (
                     <div className="absolute w-full h-full flex justify-center items-center z-10 top-0">
                         <div className="absolute w-full h-full blur-md bg-white bg-opacity-80"></div>
@@ -356,43 +356,43 @@ function StarChartViewer() {
                     </div>
                 )}
                 {state.chartData && (
-                    <div className="absolute top-0 right-1 p-2 flex flex-row">
-                        <div className="flex flex-row justify-center items-center rounded leading-8 text-sm px-3 z-10 text-dark select-none">
-                            <span className="mr-2">Legend</span>
-                            <label className="mr-2 cursor-pointer hover:opacity-80 flex items-center">
+                    <div className="sm:absolute sm:top-0 sm:right-1 sm:p-2 flex flex-row flex-wrap gap-2 justify-center sm:justify-end mb-4 sm:mb-0">
+                        <div className="flex flex-row justify-center items-center rounded leading-7 text-xs px-2 z-10 text-dark select-none bg-gray-50 border">
+                            <span className="mr-1 text-xs">Legend</span>
+                            <label className="mr-1 cursor-pointer hover:opacity-80 flex items-center text-xs">
                                 <input
-                                    className="mr-1"
+                                    className="mr-0.5"
                                     type="radio"
                                     name="legendPosition"
                                     checked={state.legendPosition === "top-left"}
                                     onChange={() => handleLegendPositionChange("top-left")}
                                 />
-                                Top left
+                                TL
                             </label>
-                            <label className="cursor-pointer hover:opacity-80 flex items-center">
+                            <label className="cursor-pointer hover:opacity-80 flex items-center text-xs">
                                 <input
-                                    className="mr-1"
+                                    className="mr-0.5"
                                     type="radio"
                                     name="legendPosition"
                                     checked={state.legendPosition === "bottom-right"}
                                     onChange={() => handleLegendPositionChange("bottom-right")}
                                 />
-                                Bottom right
+                                BR
                             </label>
                         </div>
                         <div
-                            className="flex flex-row justify-center items-center rounded leading-8 text-sm px-3 cursor-pointer z-10 text-dark select-none hover:bg-gray-100"
+                            className="flex flex-row justify-center items-center rounded leading-7 text-xs px-2 cursor-pointer z-10 text-dark select-none hover:bg-gray-100 bg-gray-50 border"
                             onClick={handleToggleLogScaleBtnClick}
                         >
-                            <input className="mr-2" type="checkbox" checked={state.useLogScale} />
-                            Log scale
+                            <input className="mr-1" type="checkbox" checked={state.useLogScale} />
+                            Log
                         </div>
                         <div
-                            className="flex flex-row justify-center items-center rounded leading-8 text-sm px-3 cursor-pointer z-10 text-dark select-none hover:bg-gray-100"
+                            className="flex flex-row justify-center items-center rounded leading-7 text-xs px-2 cursor-pointer z-10 text-dark select-none hover:bg-gray-100 bg-gray-50 border"
                             onClick={handleToggleChartBtnClick}
                         >
-                            <input className="mr-2" type="checkbox" checked={state.chartMode === "Timeline"} />
-                            {state.chartMode === "Timeline" ? "Align timeline" : "Align timeline"}
+                            <input className="mr-1" type="checkbox" checked={state.chartMode === "Timeline"} />
+                            Timeline
                         </div>
                     </div>
                 )}
