@@ -101,13 +101,24 @@ You can deploy the entire stack (frontend + backend) using Docker.
 
 2. Run the container:
 
+   **Basic run:**
+
    ```bash
    docker run -p 3000:3000 -p 8080:8080 star-history
    ```
 
-   The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:8080`.
+   **Run with environment variables from host machine:**
 
-   **Note:** You may need to provide environment variables (e.g., GitHub tokens) if required by the application.
+   ```bash
+   docker run -d \
+     -p 3000:3000 \
+     -p 8080:8080 \
+     --name star-history-app \
+     --restart unless-stopped \
+     star-history
+   ```
+
+   The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:8080`.
 
 ## 🏗 Development
 

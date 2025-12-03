@@ -24,6 +24,9 @@ COPY frontend/package.json frontend/pnpm-lock.yaml ./
 RUN pnpm config set registry https://registry.npmmirror.com && pnpm install --frozen-lockfile
 COPY frontend/ .
 ENV NODE_ENV=production
+# Add build-time environment variable
+ARG NEXT_PUBLIC_GITCODE_ACCESS_TOKEN
+ENV NEXT_PUBLIC_GITCODE_ACCESS_TOKEN=$NEXT_PUBLIC_GITCODE_ACCESS_TOKEN
 # Ensure next build works
 RUN pnpm build
 
