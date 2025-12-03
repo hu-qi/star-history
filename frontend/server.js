@@ -12,6 +12,32 @@ const startServer = (port) => {
         const parsedUrl = parse(req.url, true);
         const { pathname } = parsedUrl;
 
+        // Proxy /svg to backend
+        if (pathname && pathname.startsWith('/svg')) {
+            const backendPort = process.env.BACKEND_PORT || 8080;
+            const options = {
+                hostname: 'localhost',
+                port: backendPort,
+                path: req.url,
+                method: req.method,
+                headers: req.headers,
+            };
+
+            const proxyReq = require('http').request(options, (proxyRes) => {
+                res.writeHead(proxyRes.statusCode, proxyRes.headers);
+                proxyRes.pipe(res, { end: true });
+            });
+
+            proxyReq.on('error', (e) => {
+                console.error(`Problem with request: ${e.message}`);
+                res.statusCode = 500;
+                res.end('Backend unavailable');
+            });
+
+            req.pipe(proxyReq, { end: true });
+            return;
+        }
+
         // Redirect to lowercase URL
         if (pathname && pathname !== pathname.toLowerCase()) {
             const lowercasePathname = pathname.toLowerCase();
