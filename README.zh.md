@@ -2,7 +2,7 @@
 
 # :sparkles: Star History :sparkles:
 
-[**gstar.huqi.host**](https://gstar.huqi.host), **the missing GitCode star history graph of GitCode repos.**
+[**gstar.huqi.host**](https://gstar.huqi.host)，**GitCode 缺失的 star 历史趋势图。**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date&theme=dark" />
@@ -10,7 +10,7 @@
   <img alt="Star History Chart" src="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date" />
 </picture>
 
-👆 **THIS** is a **`live`** chart created with the following html: 👇
+👆 **这** 是一个 **`实时`** 图表，由以下 html 创建：👇
 
 <div align="left">
 
@@ -39,63 +39,63 @@
 
 ---
 
-## 🎁 Sponsors
+## 🎁 赞助商
 
 ### GitCode
 
-[GitCode](https://gitcode.com?utm_source=star-history) is an open-source platform for building LLM apps, from agents to AI workflows.
+[GitCode](https://gitcode.com?utm_source=star-history) 是一个构建 LLM 应用的开源平台，从 Agent 到 AI 工作流。
 
 <a href="https://gitcode.com?utm_source=star-history"><img src="https://raw.gitcode.com/huqi/star-history/raw/main/frontend%2Fpublic%2Fassets%2Fsponsors%2Fgitcode%2Flanding.webp" /></a>
 
 ### Huawei Developer Space
 
-[Huawei Developer Space](https://devstation.connect.huaweicloud.com/devdesktop/h5?utm_source=techcircledspace&utm_adplace=hcdggzhq) - One as All, All as One. Unified technologies. Free resources. Complete AI development—from code to deployment.
+[Huawei Developer Space](https://devstation.connect.huaweicloud.com/devdesktop/h5?utm_source=techcircledspace&utm_adplace=hcdggzhq) - 华为开发者空间（Huawei Developer Space），开发者专属的云上成长空间，汇聚昇腾、鸿蒙、鲲鹏等华为根技术，为开发者提供免费算力资源，整合云上 AI 开发工具链及配套技术案例，帮助开发者在 AI 时代下快速开发编码到应用调测，打造开发者智能 AI 应用开发平台。
 
 <a href="https://devstation.connect.huaweicloud.com/devdesktop/h5?utm_source=techcircledspace&utm_adplace=hcdggzhq"><img src="https://raw.gitcode.com/huqi/star-history/raw/main/frontend%2Fpublic%2Fassets%2Fsponsors%2Fspace%2Flanding.webp" /></a>
 
 ### OpenSource Bazaar
 
-[OpenSource Bazaar](https://bazaar.fcc-cd.dev/?utm_source=star-history) - Where Ideas Flow Freely. Everyone Does a Little, Together We Change Much.
+[OpenSource Bazaar](https://bazaar.fcc-cd.dev/?utm_source=star-history) - 创意自由流动的地方。人人为我，我为人人。
 
 <a href="https://bazaar.fcc-cd.dev/?utm_source=star-history"><img src="https://raw.gitcode.com/huqi/star-history/raw/main/frontend%2Fpublic%2Fassets%2Fsponsors%2Fbazaar%2Flanding.webp" /></a>
 
-## ✨ Features
+## ✨ 特性
 
-- **Unique** **`sketch xkcd`** feeling **chart**;
-- **One-click** generation of **high-quality** image for chart;
-- Support **multiple chart view** mode **`based on date or timeline`**;
-- **Embed** the **real-time chart** into **`GitHub readme or other websites`** **(like the one we embed here on the top)**
-- And **various** useful **functions**:
-  - toggle **repo visibility**;
-  - **shortcut** to input repo;
-  - **share** on **`Twitter`** **quickly**;
-  - **support** input **multiple repos**;
-  - ...waiting **for you** to **find out!**
+- **独特** 的 **`sketch xkcd`** 手绘风格 **图表**；
+- **一键** 生成 **高质量** 图表图片；
+- 支持 **多种图表查看** 模式 **`基于日期或时间线`**；
+- **嵌入** **实时图表** 到 **`GitHub readme 或其他网站`** **（就像我们在上面嵌入的那样）**
+- 以及 **各种** 实用 **功能**：
+  - 切换 **仓库可见性**；
+  - **快捷方式** 输入仓库；
+  - **快速** **分享** 到 **`Twitter`**；
+  - **支持** 输入 **多个仓库**；
+  - ...等待 **你** 来 **发现！**
 
-## 🌠 Screenshots
+## 🌠 截图
 
 <a href="https://gstar.huqi.host"><img width="800px" src="https://raw.gitcode.com/huqi/star-history/raw/main/frontend%2Fpublic%2Fassets%2FScreenshots.gif" />
 </a>
 
-## 🐳 Docker Deployment
+## 🐳 Docker 部署
 
-You can deploy the entire stack (frontend + backend) using Docker.
+你可以使用 Docker 部署整个技术栈（前端 + 后端）。
 
-1. Build the image:
+1. 构建镜像：
 
    ```bash
    docker build -t star-history .
    ```
 
-2. Run the container:
+2. 运行容器：
 
-   **Basic run:**
+   **基本运行：**
 
    ```bash
    docker run -p 3000:3000 -p 8080:8080 star-history
    ```
 
-   **Run with environment variables:**
+   **带环境变量运行：**
 
    ```bash
    docker run -d \
@@ -107,7 +107,7 @@ You can deploy the entire stack (frontend + backend) using Docker.
      star-history
    ```
 
-   **Or use environment file:**
+   **或使用环境文件：**
 
    ```bash
    docker run -d \
@@ -119,37 +119,37 @@ You can deploy the entire stack (frontend + backend) using Docker.
      star-history
    ```
 
-   The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:8080`.
+   前端访问地址：`http://localhost:3000`，后端访问地址：`http://localhost:8080`。
 
-   **Required Environment Variables:**
+   **必需的环境变量：**
 
-   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - GitCode access token(s) for backend API access (one token per line for multiple tokens)
+   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - 用于后端 API 访问的 GitCode 访问令牌（如果有多个令牌，每行一个）
 
-## 🏗 Development
+## 🏗 开发
 
-**`Star-history`** is built using a **modern tech stack**: **`Next.js`** + **`TailwindCSS`**.
+**`Star-history`** 使用 **现代技术栈** 构建：**`Next.js`** + **`TailwindCSS`**。
 
-### Prerequisites
+### 前置要求
 
 - [Node.js](https://nodejs.org/en/download/)
 - [pnpm](https://pnpm.io/)
 
-### Homepage
+### 主页
 
-**Homepage** of star-history with most of useful features and blogs about open source.
+Star-history **主页**，包含大多数实用功能和关于开源的博客。
 
 ```shell
 cd frontend && pnpm i && pnpm dev
 ```
 
-The website will be served at http://localhost:3000.
+网站将运行在 http://localhost:3000。
 
-### API Server
+### API 服务器
 
-**API server** is an **`experimental feature`**. It's mainly used to **generate chart `SVG`** image file that can be embeded into **`GitHub readme`**.
+**API 服务器** 是一个 **`实验性功能`**。主要用于 **生成图表 `SVG`** 图片文件，可以嵌入到 **`GitHub readme`** 中。
 
 ```shell
 cd backend && pnpm i && pnpm dev
 ```
 
-The API server will be running on http://localhost:8080.
+API 服务器将运行在 http://localhost:8080。

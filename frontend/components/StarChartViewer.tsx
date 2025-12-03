@@ -272,7 +272,7 @@ function StarChartViewer() {
 
         const addtionLink = repos.length === 1 ? `gitcode.com/${repos[0]}` : starhistoryLink
         text += `${addtionLink}%0A%0A`
-        text += `${encodeURIComponent("#starhistory #GitCode #OpenSource ")} via @StarHistoryHQ`
+        text += `${encodeURIComponent("#starhistory #GitCode #OpenSource ")} via @GitcodeOfficial @yubx110 @TarkWong`
 
         const tweetShareLink = `https://twitter.com/intent/tweet?text=${text}`
         window.open(tweetShareLink, "_blank")
@@ -413,14 +413,14 @@ function StarChartViewer() {
                     <div>
                         <div className="relative mt-4 mb-4 w-full px-3 mx-auto max-w-4xl flex flex-row flex-wrap justify-between items-center">
                             <div className="flex flex-row justify-start items-center mb-2">
-                                <a
+                                {/* <a
                                     className="h-full flex flex-row justify-center items-center leading-8 hover:opacity-80 underline underline-offset-2 mb-2 decoration-dark"
                                     href="https://chrome.google.com/webstore/detail/iijibbcdddbhokfepbblglfgdglnccfn"
                                     target="_blank"
                                 >
                                     <img className="w-5 h-auto mr-1" src="/assets/free.svg" alt="" />
                                     <span className="text-dark">Get Chrome Extension</span>
-                                </a>
+                                </a> */}
                             </div>
                             <div className="flex flex-row flex-wrap justify-end items-center mb-2">
                                 <button className="ml-2 mb-2 rounded leading-9 text-sm px-3 cursor-pointer border text-dark bg-gray-100 hover:bg-gray-200" onClick={handleGenerateImageBtnClick}>

@@ -18,40 +18,32 @@ interface Sponsor {
 
 // The list of current sponsors.
 const sponsors: Sponsor[] = [
-    // {
-    //   name: "Bytebase",
-    //   logo: utils.absolutifyLink("/assets/sponsors/bytebase/logo.webp"),
-    //   landingImage: utils.absolutifyLink("/assets/sponsors/bytebase/landing.webp"),
-    //   link: "https://bytebase.com?utm_source=star-history",
-    //   logoSlogan:
-    //     "Bytebase: Database DevSecOps for MySQL, PG, Oracle, SQL Server, Snowflake, ClickHouse, Mongo, Redis",
-    //   landingSlogan:
-    //     "Database DevSecOps for MySQL, PG, Oracle, SQL Server, Snowflake, ClickHouse, Mongo, Redis",
-    // },
-    // {
-    //     name: "Dify",
-    //     logo: utils.absolutifyLink("/assets/sponsors/dify/logo.webp"),
-    //     landingImage: utils.absolutifyLink("/assets/sponsors/dify/landing.webp"),
-    //     link: "https://dify.ai/?utm_source=star-history",
-    //     logoSlogan: "Dify: Open-source platform for building LLM apps, from agents to AI workflows.",
-    //     landingSlogan: "Open-source platform for building LLM apps, from agents to AI workflows."
-    // },
-    // {
-    //   name: "DBHub",
-    //   logo: utils.absolutifyLink("/assets/sponsors/dbhub/logo.webp"),
-    //   landingImage: utils.absolutifyLink("/assets/sponsors/dbhub/landing.webp"),
-    //   link: "https://github.com/bytebase/dbhub/?utm_source=star-history",
-    //   logoSlogan: "DBHub: Universal Database MCP Server.",
-    //   landingSlogan: "Universal Database MCP Server."
-    // },
-    // {
-    //   name: "pgschema",
-    //   logo: utils.absolutifyLink("/assets/sponsors/pgschema/logo.webp"),
-    //   landingImage: utils.absolutifyLink("/assets/sponsors/pgschema/landing.webp"),
-    //   link: "https://github.com/pgschema/pgschema/?utm_source=star-history",
-    //   logoSlogan: "pgschema: Postgres declarative schema migration, like Terraform.",
-    //   landingSlogan: "Postgres declarative schema migration, like Terraform."
-    // },
+    {
+      name: "GitCode",
+      logo: utils.absolutifyLink("/assets/sponsors/gitcode/logo.webp"),
+      landingImage: utils.absolutifyLink("/assets/sponsors/gitcode/landing.webp"),
+      link: "https://gitcode.com?utm_source=star-history",
+      logoSlogan:
+        "GitCode: Open-source platform for building LLM apps, from agents to AI workflows.",
+      landingSlogan:
+        "Open-source platform for building LLM apps, from agents to AI workflows.",
+    },
+    {
+        name: "Huawei Developer Space",
+        logo: utils.absolutifyLink("/assets/sponsors/space/logo.webp"),
+        landingImage: utils.absolutifyLink("/assets/sponsors/space/landing.webp"),
+        link: "https://devstation.connect.huaweicloud.com/devdesktop/h5?utm_source=techcircledspace&utm_adplace=hcdggzhq",
+        logoSlogan: "Huawei Developer Space: One as All, All as One.",
+        landingSlogan: "Unified technologies. Free resources. Complete AI development—from code to deployment."
+    },
+    {
+        name: "OpenSource Bazaar",
+        logo: utils.absolutifyLink("/assets/sponsors/bazaar/logo.webp"),
+        landingImage: utils.absolutifyLink("/assets/sponsors/bazaar/landing.webp"),
+        link: "https://bazaar.fcc-cd.dev/?utm_source=star-history",
+        logoSlogan: "Open Source Bazaar: Where Ideas Flow Freely",
+        landingSlogan: "Everyone Does a Little, Together We Change Much."
+    }
 ]
 
 export const randomSponsors = sampleSize(sponsors, sponsors.length)

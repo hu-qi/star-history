@@ -40,7 +40,7 @@ const generateSitemap = async () => {
   const routes = [...staticRoutes];
   const blogRoutes = await getBlogsRoutes();
   routes.push(...blogRoutes);
-  const baseUrl = "https://star-history.com";
+  const baseUrl = "https://gstar.huqi.host";
   const routeXMLTags: string[] = [];
 
   for (const route of routes) {

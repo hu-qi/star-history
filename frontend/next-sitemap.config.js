@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://www.star-history.com',
+    siteUrl: 'https://gstar.huqi.host',
     generateRobotsTxt: true, // (optional) Generate a robots.txt file
     robotsTxtOptions: {
         policies: [

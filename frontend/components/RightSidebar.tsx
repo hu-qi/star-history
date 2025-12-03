@@ -18,23 +18,23 @@ const RightSidebar: React.FC = () => {
                         <span className="text-xs mt-2">{sponsor.logoSlogan}</span>
                     </a>
                 ))}
-                <a
-                    href="mailto:star@bytebase.com?subject=I'm interested in sponsoring star-history.com"
+                {/* <a
+                    href="mailto:star@bytebase.com?subject=I'm interested in sponsoring gstar.huqi.host"
                     target="_blank"
                     className="w-full p-2 text-center bg-gray-50 text-xs leading-6 text-gray-400 rounded hover:underline hover:text-blue-600"
                 >
                     📨 Promote your project
-                </a>
+                </a> */}
 
                 {/* Newsletter Subscribe Button */}
-                <a
-                    href="https://newsletter.star-history.com/subscribe"
+                {/* <a
+                    href="https://newsletter.gstar.huqi.host/subscribe"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full mt-4 p-3 text-center bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded transition-colors"
                 >
                     Subscribe to Newsletter
-                </a>
+                </a> */}
             </div>
         </div>
     )
