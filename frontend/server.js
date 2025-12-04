@@ -7,6 +7,15 @@ const dev = process.env.NODE_ENV !== "production"
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+// Only enforce lowercase on page routes; static assets must keep case to avoid 404 on case-sensitive FS.
+const isStaticRequest = (pathname) => {
+    if (!pathname) return false
+    if (pathname.startsWith('/_next')) return true
+    if (pathname.startsWith('/assets')) return true
+    if (pathname.includes('.')) return true
+    return false
+}
+
 const startServer = (port) => {
     const server = createServer((req, res) => {
         const parsedUrl = parse(req.url, true);
@@ -38,11 +47,14 @@ const startServer = (port) => {
             return;
         }
 
-        // Redirect to lowercase URL
-        if (pathname && pathname !== pathname.toLowerCase()) {
+        // Redirect page routes (non-static) to lowercase; keep static asset casing intact
+        if (!isStaticRequest(pathname) && pathname && pathname !== pathname.toLowerCase()) {
             const lowercasePathname = pathname.toLowerCase();
-            const query = Object.assign({}, parsedUrl.query);
-            app.render(req, res, lowercasePathname, query);
+            const queryString = parsedUrl.search || '';
+            res.statusCode = 301;
+            res.setHeader('Location', `${lowercasePathname}${queryString}`);
+            res.end();
+            return;
         } else {
             handle(req, res, parsedUrl);
         }
