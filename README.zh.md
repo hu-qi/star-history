@@ -4,6 +4,8 @@
 
 [**gstar.huqi.host**](https://gstar.huqi.host)，**GitCode 缺失的 star 历史趋势图。**
 
+![star](https://gitcode.com/huqi/star-history/star/badge.svg)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date&theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date" />

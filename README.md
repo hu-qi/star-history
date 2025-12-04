@@ -4,6 +4,8 @@
 
 [**gstar.huqi.host**](https://gstar.huqi.host), **the missing GitCode star history graph of GitCode repos.**
 
+![star](https://gitcode.com/huqi/star-history/star/badge.svg)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date&theme=dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://gstar.huqi.host/svg?repos=huqi/star-history&type=Date" />
@@ -124,7 +126,7 @@ You can deploy the entire stack (frontend + backend) using Docker.
    **Required Environment Variables:**
 
    - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - GitCode access token(s) for backend API access. For multiple tokens, pass them newline-separated (e.g. `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN=$'tok1\ntok2'`) or via an env file with one token per line.
-   - `NEXT_PUBLIC_SITE_URL` *(optional)* - Public site URL used to build absolute links in SSR (e.g. sitemap/embed links).
+   - `NEXT_PUBLIC_SITE_URL` _(optional)_ - Public site URL used to build absolute links in SSR (e.g. sitemap/embed links).
 
 ## 🏗 Development
 
