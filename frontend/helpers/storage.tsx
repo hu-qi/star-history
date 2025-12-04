@@ -14,6 +14,9 @@ type StorageKey = keyof StorageData
 namespace storage {
     export function get(keys: StorageKey[]): Partial<StorageData> {
         const data: Partial<StorageData> = {}
+        if (typeof window === "undefined") {
+            return data
+        }
 
         for (const key of keys) {
             try {
@@ -31,6 +34,9 @@ namespace storage {
     }
 
     export function set(data: Partial<StorageData>) {
+        if (typeof window === "undefined") {
+            return
+        }
         for (const key in data) {
             try {
                 const stringifyValue = JSON.stringify(data[key as StorageKey])
@@ -42,6 +48,9 @@ namespace storage {
     }
 
     export function remove(keys: StorageKey[]) {
+        if (typeof window === "undefined") {
+            return
+        }
         for (const key of keys) {
             try {
                 localStorage.removeItem(key)

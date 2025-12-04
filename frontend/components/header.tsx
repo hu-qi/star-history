@@ -3,10 +3,12 @@ import TopBanner from "./TopBanner";
 import GitCodeStarButton from "./GitCodeStarButton";
 import TokenSettingDialog from "./TokenSettingDialog";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { AppStateProvider, useAppStore } from "../store";
 import storage from "../helpers/storage"
 
 const Header: React.FC = () => {
+  const router = useRouter()
   const store = useAppStore()
   const [showSetTokenDialog, setShowSetTokenDialog] = useState(false);
   const [headerText, setHeaderText] = useState("Add Access Token");
@@ -53,76 +55,80 @@ useEffect(() => {
         />
       )}
 
-      <AppStateProvider>
-        {/* <TopBanner /> */}
-        <header className="w-full h-14 shrink-0 flex flex-row justify-center items-center bg-[#363636] text-light">
-          <div className="w-full md:max-w-5xl lg:max-w-7xl h-full flex flex-row justify-between items-center px-0 sm:px-4">
-            <div className="h-full bg-dark flex flex-row justify-start items-center">
-              <Link href="/" className="h-full flex flex-row justify-center items-center px-3 hover:bg-zinc-800">
-                <img className="w-7 h-auto" src="/assets/icon.png" alt="Logo" />
-              </Link>
-              {/* <Link href="/blog"className="h-full flex flex-row justify-center items-center text-base px-2 hover:bg-zinc-800">
+      {/* <TopBanner /> */}
+      <header className="w-full h-14 shrink-0 flex flex-row justify-center items-center bg-[#363636] text-light">
+        <div className="w-full md:max-w-5xl lg:max-w-7xl h-full flex flex-row justify-between items-center px-0 sm:px-4">
+          <div className="h-full bg-dark flex flex-row justify-start items-center">
+            <Link href="/" className="h-full flex flex-row justify-center items-center px-3 hover:bg-zinc-800">
+              <img className="w-7 h-auto" src="/assets/icon.png" alt="Logo" />
+            </Link>
+            {router.pathname === '/blog' ? (
+              <span className="h-full flex flex-row justify-center items-center text-base px-2 text-white cursor-default">
                 <span className="text-white -2">Blog</span>
-              </Link> */}
-              <span
-                className="h-full flex flex-row justify-center items-center cursor-pointer text-white text-base px-2 hover:bg-zinc-800"
-                onClick={handleSetTokenBtnClick}
-              >
-                {headerText}
               </span>
-            </div>
-            <div className="hidden md:flex flex-row justify-center items-center">
-              {/* <Link href="/blog/how-to-use-github-star-history" className="flex flex-row items-center text-base px-2 hover:underline">
-                <span className="text-white">📕 How to Use</span>
-              </Link> */}
-            </div>
-            <div className="h-full hidden md:flex flex-row justify-end items-center space-x-2">
-              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://raw.gitcode.com/huqi/huqi/raw/main/wechat-huqi.jpg" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-weixin text-2xl text-green-500"></i>
-              </a>
-
-              <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://twitter.com/huqii" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter text-2xl text-blue-300"></i>
-              </a>
-              {/* <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://rss.beehiiv.com/feeds/BbNzf9ozGZ.xml" target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-rss text-2xl text-orange-400"></i>
-              </a> */}
-              <GitCodeStarButton />
-            </div>
-
-            <div className="h-full flex md:hidden flex-row justify-end items-center">
-              <span
-                className="relative h-full w-10 px-3 flex flex-row justify-center items-center cursor-pointer font-semibold text-light hover:bg-zinc-800"
-                onClick={handleToggleDropMenuBtnClick}
-              >
-                <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "w-6 rotate-45" : "-mt-1"}`}></span>
-                <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "hidden" : ""}`}></span>
-                <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "w-6 -rotate-45" : "mt-1"}`}></span>
-              </span>
-            </div>
-          </div>
-        </header>
-        <div className={`w-full h-auto py-2 flex md:hidden flex-col justify-start items-start shadow-lg border-b ${state.showDropMenu ? "flex" : "hidden"}`}>
-          <span
-            className="h-12 px-3 text-base w-full flex flex-row justify-start items-center cursor-pointer font-semibold text-dark mr-2 hover:bg-gray-100 hover:text-blue-500"
-            onClick={handleSetTokenBtnClick}
-          >
-            {headerText}
-          </span>
-          <span className="h-12 text-base px-3 w-full flex flex-row justify-start items-center">
-            <a
-              className="github-button -mt-1"
-              href="https://gitcode.com/huqi/star-history"
-              data-show-count="true"
-              aria-label="Star huqi/star-history on GitCode"
-              target="_blank"
-              rel="noopener noreferrer"
+            ) : (
+              <Link href="/blog" className="h-full flex flex-row justify-center items-center text-base px-2 hover:bg-zinc-800">
+                <span className="text-white -2">Blog</span>
+              </Link>
+            )}
+            <span
+              className="h-full flex flex-row justify-center items-center cursor-pointer text-white text-base px-2 hover:bg-zinc-800"
+              onClick={handleSetTokenBtnClick}
             >
-              Star
+              {headerText}
+            </span>
+          </div>
+          <div className="hidden md:flex flex-row justify-center items-center">
+            {/* <Link href="/blog/how-to-use-github-star-history" className="flex flex-row items-center text-base px-2 hover:underline">
+              <span className="text-white">📕 How to Use</span>
+            </Link> */}
+          </div>
+          <div className="h-full hidden md:flex flex-row justify-end items-center space-x-2">
+            <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://raw.gitcode.com/huqi/huqi/raw/main/wechat-huqi.jpg" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-weixin text-2xl text-green-500"></i>
             </a>
-          </span>
+
+            <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://twitter.com/huqii" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter text-2xl text-blue-300"></i>
+            </a>
+            {/* <a className="h-full flex flex-row justify-center items-center px-2 hover:bg-zinc-800" href="https://rss.beehiiv.com/feeds/BbNzf9ozGZ.xml" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-rss text-2xl text-orange-400"></i>
+            </a> */}
+            <GitCodeStarButton />
+          </div>
+
+          <div className="h-full flex md:hidden flex-row justify-end items-center">
+            <span
+              className="relative h-full w-10 px-3 flex flex-row justify-center items-center cursor-pointer font-semibold text-light hover:bg-zinc-800"
+              onClick={handleToggleDropMenuBtnClick}
+            >
+              <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "w-6 rotate-45" : "-mt-1"}`}></span>
+              <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "hidden" : ""}`}></span>
+              <span className={`w-4 transition-all h-px bg-light absolute top-1/2 ${state.showDropMenu ? "w-6 -rotate-45" : "mt-1"}`}></span>
+            </span>
+          </div>
         </div>
-      </AppStateProvider>
+      </header>
+      <div className={`w-full h-auto py-2 flex md:hidden flex-col justify-start items-start shadow-lg border-b ${state.showDropMenu ? "flex" : "hidden"}`}>
+        <span
+          className="h-12 px-3 text-base w-full flex flex-row justify-start items-center cursor-pointer font-semibold text-dark mr-2 hover:bg-gray-100 hover:text-blue-500"
+          onClick={handleSetTokenBtnClick}
+        >
+          {headerText}
+        </span>
+        <span className="h-12 text-base px-3 w-full flex flex-row justify-start items-center">
+          <a
+            className="github-button -mt-1"
+            href="https://gitcode.com/huqi/star-history"
+            data-show-count="true"
+            aria-label="Star huqi/star-history on GitCode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Star
+          </a>
+        </span>
+      </div>
     </>
   );
 };

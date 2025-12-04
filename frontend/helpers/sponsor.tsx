@@ -1,4 +1,3 @@
-import { sampleSize } from "lodash"
 import utils from "../shared/common/utils"
 
 interface Sponsor {
@@ -46,4 +45,4 @@ const sponsors: Sponsor[] = [
     }
 ]
 
-export const randomSponsors = sampleSize(sponsors, sponsors.length)
+export const randomSponsors = sponsors

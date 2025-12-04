@@ -384,14 +384,14 @@ function StarChartViewer() {
                             className="flex flex-row justify-center items-center rounded leading-7 text-xs px-2 cursor-pointer z-10 text-dark select-none hover:bg-gray-100 bg-gray-50 border"
                             onClick={handleToggleLogScaleBtnClick}
                         >
-                            <input className="mr-1" type="checkbox" checked={state.useLogScale} />
+                            <input className="mr-1" type="checkbox" checked={state.useLogScale} readOnly />
                             Log
                         </div>
                         <div
                             className="flex flex-row justify-center items-center rounded leading-7 text-xs px-2 cursor-pointer z-10 text-dark select-none hover:bg-gray-100 bg-gray-50 border"
                             onClick={handleToggleChartBtnClick}
                         >
-                            <input className="mr-1" type="checkbox" checked={state.chartMode === "Timeline"} />
+                            <input className="mr-1" type="checkbox" checked={state.chartMode === "Timeline"} readOnly />
                             Timeline
                         </div>
                     </div>

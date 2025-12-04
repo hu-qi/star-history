@@ -22,8 +22,13 @@ const GitCodeStarButton = () => {
                 })
                 count = data.stargazers_count;
                 setVisible(true)
-            } catch (error) {
-              console.error('Failed to fetch GitCode star', error)
+            } catch (error: any) {
+              // Fail silently for 403 (rate limit/auth issues) - just don't show the button
+              if (error?.response?.status === 403) {
+                console.debug('GitCode API rate limit or auth issue, hiding star button')
+              } else {
+                console.error('Failed to fetch GitCode star count', error)
+              }
             }
             return count;
         }
