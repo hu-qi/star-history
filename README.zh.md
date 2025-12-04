@@ -123,7 +123,8 @@
 
    **必需的环境变量：**
 
-   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - 用于后端 API 访问的 GitCode 访问令牌（如果有多个令牌，每行一个）
+   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - 用于后端 API 访问的 GitCode 访问令牌。支持多个令牌，需使用换行分隔（示例：`NEXT_PUBLIC_GITCODE_ACCESS_TOKEN=$'tok1\ntok2'`），或在 env 文件中按行填写。
+   - `NEXT_PUBLIC_SITE_URL`（可选）- 站点对外访问地址，用于 SSR 构造绝对链接（如 sitemap、嵌入链接）。
 
 ## 🏗 开发
 

@@ -123,7 +123,8 @@ You can deploy the entire stack (frontend + backend) using Docker.
 
    **Required Environment Variables:**
 
-   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - GitCode access token(s) for backend API access (one token per line for multiple tokens)
+   - `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN` - GitCode access token(s) for backend API access. For multiple tokens, pass them newline-separated (e.g. `NEXT_PUBLIC_GITCODE_ACCESS_TOKEN=$'tok1\ntok2'`) or via an env file with one token per line.
+   - `NEXT_PUBLIC_SITE_URL` *(optional)* - Public site URL used to build absolute links in SSR (e.g. sitemap/embed links).
 
 ## 🏗 Development
 

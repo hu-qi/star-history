@@ -6,10 +6,10 @@ const Footer = () => {
             <div className="w-full py-2 px-3 md:w-5/6 lg:max-w-7xl flex flex-row flex-wrap justify-between items-center text-neutral-700 border-t">
                 <div className="text-sm leading-8 flex flex-row flex-wrap justify-start items-center">
                     <div className="h-full text-gray-600">The missing GitCode star history graph</div>
-                    <a className="h-full flex flex-row justify-center items-center ml-3 text-lg hover:opacity-80" href="https://twitter.com/StarHistoryHQ" target="_blank" rel="noopener noreferrer">
+                    <a className="h-full flex flex-row justify-center items-center ml-3 text-lg hover:opacity-80" href="https://twitter.com/huqii" target="_blank" rel="noopener noreferrer">
                         <FaTwitter />
                     </a>
-                    <a className="h-full flex flex-row justify-center items-center mx-3 text-lg hover:opacity-80" href="mailto:star@bytebase.com" target="_blank" rel="noopener noreferrer">
+                    <a className="h-full flex flex-row justify-center items-center mx-3 text-lg hover:opacity-80" href="mailto:kefu@gitcode.com" target="_blank" rel="noopener noreferrer">
                         <FaEnvelope />
                     </a>
                     <a
@@ -23,29 +23,30 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-row flex-wrap items-center space-x-4">
                     <div className="flex flex-row text-sm leading-8 underline text-blue-700 hover:opacity-80">
-                        <img className="h-4 mt-2 mr-2" src="/assets/sqlchat.webp" alt="SQL Chat" />
-                        <a href="https://sqlchat.ai" target="_blank" rel="noopener noreferrer">
+                        <img className="h-4 mt-2 mr-2" src="/assets/devstation.webp" alt="DevStation" />
+                        <a href="https://devstation.connect.huaweicloud.com/devdesktop/h5?utm_source=techcircledspace&utm_adplace=hcdggzhq" target="_blank" rel="noopener noreferrer">
                             {" "}
-                            SQL Chat{" "}
+                            Huawei DevStation{" "}
                         </a>
                     </div>
                     <div className="flex flex-row text-sm leading-8 underline text-blue-700 hover:opacity-80">
-                        <img className="h-4 mt-2 mr-2" src="/assets/dbcost.webp" alt="DB Cost" />
-                        <a href="https://dbcost.com" target="_blank" rel="noopener noreferrer">
-                            DB Cost
+                        <img className="h-4 mt-2 mr-2" src="/assets/gitcode.webp" alt="GitCode" />
+                        <a href="https://gitcode.com" target="_blank" rel="noopener noreferrer">
+                            AotmGit | GitCode
                         </a>
                     </div>
                 </div>
                 <div className="text-xs leading-8 flex flex-row flex-nowrap justify-end items-center">
                     <span className="text-gray-600">
                         Maintained by{" "}
-                        <a className="text-blue-500 font-bold hover:opacity-80" href="https://bytebase.com" target="_blank" rel="noopener noreferrer">
-                            Bytebase
+                        <a className="bg-blue-400 text-white p-1 pl-2 pr-2 rounded-l-2xl rounded-r-2xl hover:opacity-80" href="https://github.com/hu-qi" target="_blank" rel="noopener noreferrer">
+                            @hu-qi
                         </a>
                         , originally built by{" "}
                         <a className="bg-blue-400 text-white p-1 pl-2 pr-2 rounded-l-2xl rounded-r-2xl hover:opacity-80" href="https://twitter.com/tim_qian" target="_blank" rel="noopener noreferrer">
                             @tim_qian
                         </a>
+                        
                     </span>
                 </div>
             </div>

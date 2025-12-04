@@ -149,11 +149,23 @@ namespace utils {
     }
 
     export function absolutifyLink(rel: string): string {
+        // 优先使用环境变量（适用于 SSR）
+        const base = process.env.NEXT_PUBLIC_SITE_URL
+        if (base) {
+            try {
+                return new URL(rel, base).toString()
+            } catch {
+                // 继续执行下面的逻辑
+            }
+        }
+
+        // 降级到浏览器端处理
         if (typeof window !== "undefined") {
             const anchor = document.createElement("a")
             anchor.setAttribute("href", rel)
             return anchor.href
         }
+        
         return rel
     }
 }
