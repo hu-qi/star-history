@@ -25,6 +25,18 @@ const Index: NextPage<IndexProps> = () => {
                 <title>{metadata.title}</title>
                 <meta name="description" content="GitCode Star History" />
 
+                {/* Baidu */}
+                <meta name="baidu-site-verification" content="codeva-QqsHdVV053" />
+
+                {/* Google */}
+                <meta name="google-site-verification" content="Owj2LT0U1JoxbiGPVPsESG4QRF76Hos0Z7EzSJiWnX4" />
+
+                {/* Microsoft */}
+                <meta name="msvalidate.01" content="31196C4A8F83E57C625A7D428F3B7EC8" />
+
+                {/* Pinterest */}
+                <meta name="p:domain_verify" content="9d6f586231fb88cc506d2d96d5a2724f"/>
+
                 {/* Standard Meta Tags */}
                 <meta name="description" content={metadata.description} />
 
